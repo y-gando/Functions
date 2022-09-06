@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function scope example</title>
+  </head>
+<body>
+
+  <script>
+    // xに1を代入
+    const x = 1;
+
+    //yに2を代入するa関数を定義
+    function a() {
+      const y = 2;
+    }
+
+    // zに3を代入するz関数を定義
+    function b() {
+      const z = 3;
+    }
+
+    // 以下条件で値を返すoutput関数を定義
+    function output(value) {
+      //paraにHTML内のpを代入
+      const para = document.createElement('p');
+      // 末尾にparaを追加
+      document.body.appendChild(para);
+      // paraのテキストは`Value:（選択された値）`となる
+      para.textContent = `Value: ${value}`;
+    }
+  </script>
+</body>
+</html>
